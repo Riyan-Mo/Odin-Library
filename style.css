@@ -1,3 +1,7 @@
+:root {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 form input {
   padding: 5px;
 }
@@ -9,18 +13,18 @@ form input {
   row-gap: 30px;
   justify-content: center;
   text-align: center;
-  border: 2px red solid;
+  border: 2px rgb(65, 158, 65) solid;
   border-radius: 10px;
 }
 
 .read-button {
-  background: red;
+  background: rgb(65, 158, 65);
   color: white;
   border-radius: 10px;
   border: 2px black solid;
 }
 
-.read {
+.unread {
   color: white;
-  background: rgb(255, 79, 79);
+  background: red;
 }

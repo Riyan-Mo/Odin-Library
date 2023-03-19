@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="grid">
+
+    <div class="bg-green-600 p-8">
+      <p class="text-white text-center text-5xl">Odin-Library</p>
+    </div>
+
+    <div class="bg-green-400 p-8 text-lg">
+      <form action="post" class="grid justify-center gap-5">
+
+        <div class="grid">
+          <label for="name">Book Name:</label>
+          <input type="text" name="name" for="name" id="name">
+        </div>
+
+        <div class="grid">
+          <label for="author">Author:</label>
+          <input type="text" name="author" for="author" id="author">
+        </div>
+
+        <div class="grid">
+          <label for="Pages">Pages:</label>
+          <input type="number" name="Pages" for="Pages" id="Pages">
+        </div>
+
+        <button type="button" class="bg-green-600 text-white p-3 rounded-md">Add Book</button>
+
+      </form>
+    </div>
+
+    <div class="grid justify-center grid-flow-col gap-x-10 p-10">
+      <div class="grid grid-flow-col gap-x-4">
+        <p>Read</p>
+        <div class="bg-green-500 h-5 w-5 border border-green-500"></div>
+      </div>
+      <div class="grid grid-flow-col gap-x-4">
+        <p>Unread</p>
+        <div class="bg-red-600 h-5 w-5 border border-red-500"></div>
+      </div>
+    </div>
+
+    <div id="bookContainer" class="grid grid-cols-3 place-items-center gap-x-3 p-10">
+
+      <div class="book">
+        <p>book 1</p>
+        <p>Riyan Mohammad</p>
+        <p>120 pages</p>
+        <button class="read-button">Read</button>
+      </div>
+
+      <div class="book">
+        <p>book 1</p>
+        <p>Riyan Mohammad</p>
+        <p>120 pages</p>
+        <button class="read-button unread">Read</button>
+      </div>
+
+
+    </div>
+
+  </div>
+</body>
+
 </html>
