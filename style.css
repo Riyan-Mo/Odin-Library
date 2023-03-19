@@ -9,11 +9,11 @@ form input {
 .book {
   font-size: 25px;
   display: grid;
-  padding: 30px 25px;
-  row-gap: 30px;
-  justify-content: center;
+  grid-template-rows: repeat(4, 1fr);
+  padding: 25px;
+  row-gap: 20px;
   text-align: center;
-  border: 2px rgb(65, 158, 65) solid;
+  border: 10px rgb(65, 158, 65) solid;
   border-radius: 10px;
 }
 
@@ -21,10 +21,18 @@ form input {
   background: rgb(65, 158, 65);
   color: white;
   border-radius: 10px;
-  border: 2px black solid;
 }
 
-.unread {
-  color: white;
+.unread-button {
   background: red;
+}
+
+.unread-book {
+  border-color: red;
+}
+
+.delete-button {
+  color: white;
+  border-radius: 10px;
+  background-color: black;
 }
