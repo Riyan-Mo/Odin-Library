@@ -1,0 +1,26 @@
+form input {
+  padding: 5px;
+}
+
+.book {
+  font-size: 25px;
+  display: grid;
+  padding: 30px 25px;
+  row-gap: 30px;
+  justify-content: center;
+  text-align: center;
+  border: 2px red solid;
+  border-radius: 10px;
+}
+
+.read-button {
+  background: red;
+  color: white;
+  border-radius: 10px;
+  border: 2px black solid;
+}
+
+.read {
+  color: white;
+  background: rgb(255, 79, 79);
+}
