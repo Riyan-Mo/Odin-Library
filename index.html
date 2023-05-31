@@ -23,20 +23,25 @@
 
         <div class="grid">
           <label for="name">Book Name:</label>
-          <input type="text" name="name" for="name" id="name">
+          <input type="text" name="name" id="name" required>
         </div>
 
         <div class="grid">
           <label for="author">Author:</label>
-          <input type="text" name="author" for="author" id="author">
+          <input type="text" name="author" id="author" required>
         </div>
 
         <div class="grid">
           <label for="pages">Pages:</label>
-          <input type="number" name="pages" for="pages" id="pages">
+          <input type="number" name="pages" id="pages" required>
         </div>
 
-        <button type="button" id="addBook" class="bg-green-600 text-white p-3 rounded-md">Add Book</button>
+        <div class="grid grid-flow-col">
+          <label for="isRead">Read</label>
+          <input type="checkbox" name="isRead" id="isRead" value="true">
+        </div>
+
+        <button id="addBook" type="submit" class="bg-green-600 text-white p-3 rounded-md">Add Book</button>
 
       </form>
     </div>
