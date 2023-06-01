@@ -5,8 +5,6 @@ const bookPages = document.querySelector('#pages');
 const bookContainer = document.querySelector('#bookContainer');
 const bookIsRead = document.querySelector("#isRead");
 
-let count = 0;
-
 let books = [];
 
 window.onload = function(){
@@ -15,9 +13,9 @@ window.onload = function(){
 }
 class Book{
   constructor(_name, _author, _pages, _isRead){
-    this.name = _name;
-    this.author = _author;
-    this.pages = _pages;
+    this.Name = _name;
+    this.Author = _author;
+    this.Pages = _pages;
     this.isRead = _isRead; 
   }
 }
@@ -56,12 +54,13 @@ function createDeleteBtn(newBook){
   deleteBtn.addEventListener('click', function(){
     books.splice(newBook.id, 1)
     localStorage.setItem("Books", JSON.stringify(books));
-    bookContainer.removeChild(newBook);
+    renderBooks();
   })
   return deleteBtn;
 }
 
 function renderBooks(){
+  let count = 0;
   bookContainer.innerHTML = "";
   books.forEach(book => {
       let newBook = document.createElement('div');
@@ -85,7 +84,7 @@ function bookDetails(literature, newBook){
   for(let key in literature){
     if(key !== "isRead"){
     const attribute = document.createElement('p');
-    attribute.textContent = literature[key];
+    attribute.textContent = `${key}: ${literature[key]}`;
     newBook.appendChild(attribute);
     }
   }
@@ -96,13 +95,6 @@ function changeReadStatus(readBtn, newBook){
   const changedBook = books.splice(changedBookId, 1);
   changedBook[0].isRead = !changedBook[0].isRead;
   books = [...changedBook, ...books];
-  localStorage.setItem("Books", JSON.stringify(books));
-  if(changedBook[0].isRead){
-        readBtn.classList.remove('unread-button');
-        newBook.classList.remove('unread-book');
-      }
-      else{
-        readBtn.classList.add('unread-button');
-        newBook.classList.add('unread-book');
-  }    
+  renderBooks();
+  localStorage.setItem("Books", JSON.stringify(books));    
 }

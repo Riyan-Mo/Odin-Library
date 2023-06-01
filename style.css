@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: fantasy;
 }
 
 form input {
@@ -9,7 +9,6 @@ form input {
 .book {
   font-size: 25px;
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
   padding: 25px;
   row-gap: 20px;
   text-align: center;
